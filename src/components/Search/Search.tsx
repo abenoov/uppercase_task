@@ -1,5 +1,7 @@
-import searchIcon from "../../assets/icon/searchIcon.svg";
 import { useState } from "react";
+
+import searchIcon from "../../assets/icon/searchIcon.svg";
+
 import styles from "./search.module.css";
 
 interface SearchProps {

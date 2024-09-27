@@ -1,6 +1,8 @@
+import Search from "../../components/Search/Search";
+
 import uppercaseLogo from "../../assets/uppercaseLogo.png";
 import userIcon from "../../assets/icon/userIcon.svg";
-import Search from "../../components/Search/Search";
+
 import styles from "./header.module.css";
 
 interface HeaderProps {

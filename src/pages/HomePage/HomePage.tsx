@@ -1,6 +1,8 @@
 import { useState } from "react";
-import Card from "../../components/Card/Card";
+
 import { useMediaContent } from "../../hooks/useMediaContent";
+
+import Card from "../../components/Card/Card";
 import Layout from "../../layout/Layout/Layout";
 import Header from "../../layout/Header/Header";
 import Pagination from "../../components/Pagination/Pagination";
