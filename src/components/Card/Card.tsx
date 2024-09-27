@@ -2,9 +2,15 @@ import bannerMockIcon from "../../assets/icon/bannerMockIcon.svg";
 
 import styles from "./card.module.css";
 
-interface CardProps {}
+interface CardProps {
+  name: string;
+  year: string;
+  imdbID: string;
+  type: string;
+  poster: string;
+}
 
-const Card: React.FC<CardProps> = () => {
+const Card: React.FC<CardProps> = ({ name, year, imdbID, type }) => {
   return (
     <div className={styles.cardWrapper}>
       <div className={styles.imageContainer}>
@@ -15,10 +21,10 @@ const Card: React.FC<CardProps> = () => {
         />
       </div>
       <div className={styles.cardDescription}>
-        <span>Name: Batman</span>
-        <span>Year: 1996</span>
-        <span>imdbID: 2344j</span>
-        <span>Type: Movie</span>
+        <span>Name: {name}</span>
+        <span>Year: {year}</span>
+        <span>imdbID: {imdbID}</span>
+        <span>Type: {type}</span>
       </div>
     </div>
   );

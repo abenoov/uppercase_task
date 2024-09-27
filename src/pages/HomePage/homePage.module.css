@@ -1,0 +1,19 @@
+.searchResultsTitle {
+  display: flex;
+  align-items: center;
+}
+
+.searchResultsTitle span {
+  border-radius: 6px;
+  margin-left: 16px;
+  background: #6627ff;
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 14px;
+}
+
+.searchResultsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
