@@ -1,50 +1,27 @@
-# React + TypeScript + Vite
+Frontend exercises for UPPERCASE GROUP
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Candidate: Mukhtar Abenov
 
-Currently, two official plugins are available:
+Linkedin: https://www.linkedin.com/in/abenoov/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Email: mukhtaraben@gmail.com
 
-## Expanding the ESLint configuration
+## How to run the project locally
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Install dependencies
 
-- Configure the top-level `parserOptions` property like this:
+Install the project dependencies by running the following command:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+yarn install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Start the development server
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+To start the development server and run your React application, use the following command:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+yarn dev
 ```
+
+This will launch the development server, and you should see a message like "running at:" followed by the local development server URL (e.g., `http://localhost:3002`). Open this URL in your web browser to view your React application.
