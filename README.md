@@ -6,6 +6,8 @@ Linkedin: https://www.linkedin.com/in/abenoov/
 
 Email: mukhtaraben@gmail.com
 
+Total time spent 5-6 hours (with bonus tasks)
+
 ## How to run the project locally
 
 ### Install dependencies
