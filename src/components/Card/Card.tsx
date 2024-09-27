@@ -1,3 +1,4 @@
+import { useState } from "react";
 import bannerMockIcon from "../../assets/icon/bannerMockIcon.svg";
 
 import styles from "./card.module.css";
@@ -11,13 +12,20 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = ({ name, year, imdbID, type, poster }) => {
+  const [imageSrc, setImageSrc] = useState<string>(poster);
+
+  const handleImageError = () => {
+    setImageSrc(bannerMockIcon);
+  };
+
   return (
     <div className={styles.cardWrapper}>
       <div className={styles.imageContainer}>
         <img
           className={styles.mockedBanner}
-          src={poster ? poster : bannerMockIcon}
+          src={imageSrc}
           alt="banner"
+          onError={handleImageError}
         />
       </div>
       <div className={styles.cardDescription}>
