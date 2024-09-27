@@ -10,13 +10,13 @@ interface CardProps {
   poster: string;
 }
 
-const Card: React.FC<CardProps> = ({ name, year, imdbID, type }) => {
+const Card: React.FC<CardProps> = ({ name, year, imdbID, type, poster }) => {
   return (
     <div className={styles.cardWrapper}>
       <div className={styles.imageContainer}>
         <img
           className={styles.mockedBanner}
-          src={bannerMockIcon}
+          src={poster ? poster : bannerMockIcon}
           alt="banner"
         />
       </div>

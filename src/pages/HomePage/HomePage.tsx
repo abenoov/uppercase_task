@@ -3,6 +3,7 @@ import Card from "../../components/Card/Card";
 import { useMediaContent } from "../../hooks/useMediaContent";
 import Layout from "../../layout/Layout/Layout";
 import Header from "../../layout/Header/Header";
+import Pagination from "../../components/Pagination/Pagination";
 
 import styles from "./homePage.module.css";
 
@@ -12,18 +13,26 @@ const HomePage = () => {
 
   const { data, error, isLoading } = useMediaContent(contentName, pageNumber);
 
+  console.error(error);
+
   const handleSearchChange = (value: string) => {
     setContentName(value);
+    setPageNumber(1);
   };
+
+  const handlePageChange = (page: number) => {
+    setPageNumber(page);
+  };
+
+  const totalResults = Number(data?.totalResults) || 0;
+  const totalPages = totalResults > 0 ? Math.ceil(totalResults / 10) : 0;
 
   return (
     <Layout>
-      <Header onSearch={handleSearchChange} defaultValue={contentName} />{" "}
+      <Header onSearch={handleSearchChange} defaultValue={contentName} />
       <div className={styles.searchResultsTitle}>
         <h2>You searched for: {contentName}</h2>
-        {!isLoading && (
-          <span>{data?.Search ? data?.totalResults : 0} results</span>
-        )}
+        <span>{isLoading ? 0 : totalResults} results</span>
       </div>
       {isLoading ? (
         <h1>Loading...</h1>
@@ -41,6 +50,11 @@ const HomePage = () => {
           ))}
         </div>
       )}
+      <Pagination
+        currentPage={pageNumber}
+        totalPages={totalPages}
+        onPageChange={handlePageChange}
+      />
     </Layout>
   );
 };

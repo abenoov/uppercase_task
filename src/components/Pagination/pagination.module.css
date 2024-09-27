@@ -1,0 +1,64 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* gap: 10px; */
+  padding: 10px;
+}
+
+.pageButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  width: 30px;
+  border: 1px solid #e6eaf5;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.2s ease;
+}
+
+.pageButton:hover {
+  background-color: #f3f5f9;
+}
+
+.pageButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.activePage {
+  background-color: #f3f5f9;
+  font-weight: bold;
+}
+
+.arrowButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  height: 28px;
+  width: 30px;
+  background-color: #fff;
+  border: 1px solid #e6eaf5;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.arrowButton:hover {
+  background-color: #eaeaea;
+}
+
+.arrowButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.arrowButton:first-child {
+  border-radius: 6px 0px 0 6px;
+}
+
+.arrowButton:last-child {
+  border-radius: 0 6px 6px 0;
+}

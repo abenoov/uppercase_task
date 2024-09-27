@@ -26,16 +26,16 @@ const fetchMediaContent = async (
       throw new Error("No data returned from API");
     }
 
-    return response.data; // Возвращаем данные
+    return response.data;
   } catch (error) {
     console.error(error);
-    throw new Error("Failed to fetch media content"); // Пробрасываем ошибку
+    throw new Error("Failed to fetch media content");
   }
 };
 
 export const useMediaContent = (contentName: string, pageNumber: number) => {
   return useQuery({
-    queryKey: ["mediaContent", contentName, pageNumber], // Включаем параметры в ключ
+    queryKey: ["mediaContent", contentName, pageNumber],
     queryFn: () => fetchMediaContent(contentName, pageNumber),
   });
 };
