@@ -1,0 +1,18 @@
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  border: 1px solid #e6eaf5;
+  border-radius: 6px;
+  padding: 0 14px;
+  background-color: #fcfcff;
+}
+
+.inputContainer {
+  width: 230px;
+  font-size: 14px;
+  padding: 10px 0;
+  border-color: transparent;
+  background: transparent;
+  color: #929bbc;
+}

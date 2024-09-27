@@ -1,0 +1,22 @@
+.header {
+  margin: 40px 0;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.userContainer {
+  display: flex;
+  align-items: center;
+}
+
+.userContainer img {
+  margin-right: 8px;
+}
+
+.userContainer span {
+  font-size: 14px;
+}
