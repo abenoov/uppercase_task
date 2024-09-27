@@ -1,0 +1,25 @@
+.imageContainer {
+  position: relative;
+  width: 246px;
+  height: 270px;
+  border: 1px solid #6627ff;
+  border-radius: 10px;
+  margin-bottom: 24px;
+}
+
+.mockedBanner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cardDescription {
+  display: flex;
+  flex-direction: column;
+  margin: 0 14px;
+}
+
+.cardDescription span {
+  margin-bottom: 4px;
+}

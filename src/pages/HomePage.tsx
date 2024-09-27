@@ -1,9 +1,13 @@
+import Card from "../components/Card/Card";
 import Layout from "../layout/Layout/Layout";
 
 const HomePage = () => {
   return (
     <Layout>
-      <div>sdfsdf</div>
+      <div>
+        <h2>You searched for:</h2>
+        <Card />
+      </div>
     </Layout>
   );
 };

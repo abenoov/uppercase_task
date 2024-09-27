@@ -10,9 +10,6 @@ input,
 textarea,
 button {
   font-family: "Gilroy", sans-serif;
-}
-
-body {
   margin: 0;
   padding: 0;
   align-items: center;
@@ -20,7 +17,9 @@ body {
 
 main {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  width: 1030px;
+  margin: 0 auto;
 }
 
 input:focus {
